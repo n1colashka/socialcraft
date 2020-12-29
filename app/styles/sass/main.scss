@@ -1,2 +1,35 @@
 @import "config";
 @import "blocks/**/*";
+
+
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 48px;
+    }
+
+    .hero {
+        &__text {
+            font-size: 16px;
+        }
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 44px;
+        line-height: 1;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .hero {
+        &__text {
+            font-size: 16px;
+        }
+        
+    }
+}

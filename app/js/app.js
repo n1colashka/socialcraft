@@ -5,18 +5,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 	function initReviewsSlider() {
-		const reviewsSlider = new Swiper('.reviews__slider', {
-			slidesPerView: 3,
-			spaceBetween: 40,
-			loop: true,
-			// Navigation arrows
-			navigation: {
-				nextEl: '.reviews__button-next',
-				prevEl: '.reviews__button-prev',
-			},
-		})
+
+		if (document.querySelector('.reviews__slider')) {
+			const reviewsSlider = new Swiper('.reviews__slider', {
+				slidesPerView: 3,
+				spaceBetween: 40,
+				loop: true,
+				// Navigation arrows
+				navigation: {
+					nextEl: '.reviews__button-next',
+					prevEl: '.reviews__button-prev',
+				},
+			})
+		}
+		
 	}
 
+	function initAccordion() {
+		if (document.querySelector('.questions')) {
+			document.querySelector('.questions__list').addEventListener('click', (e) => {
+				if (e.target.closest('.questions__item-head')) {
+					document.querySelectorAll('.questions__item').forEach(item => {
+						item.classList.remove('open');
+					})
+					e.target.closest('.questions__item').classList.toggle('open');
+				}
+			})
+		}
+		
+	}
+	
 	initReviewsSlider();
+	initAccordion();
 
 })
