@@ -10,6 +10,7 @@ $textcolor: #292D34 // Text Color
 $lineheight: 1.4 // Document Line Height
 $userfont: 'Roboto Mono', sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$bg: #FFF9F2;
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
@@ -17,8 +18,9 @@ $gutter: $grid-gutter-width
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+	
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
@@ -57,6 +59,7 @@ body
 	color: $textcolor
 	min-width: 320px
 	position: relative
+	background-color: $bg
 	overflow-x: hidden
 
 ul 
@@ -75,15 +78,55 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button
     -webkit-appearance: none
 
+.container
+	max-width: 1170px
+	width: 100%
+	padding: 0 10px
+	margin: 0 auto
 
 .title 
-	font-family: Roboto Condensed
+	font-family: 'Roboto Condensed'
 	font-style: normal
 	font-weight: bold
 	font-size: 46px
 	line-height: 56px
+	color: $brown
+
+	span
+		color: $red
 	
-.page-title 
+.page-title
+	font-family: 'Roboto Condensed';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 64px;
+	line-height: 72px;
+	color: $brown;
 
 .btn 
+	background: url('../images/dist/btn-bg-left.svg') no-repeat left bottom,
+	url('../images/dist/btn-bg-right.svg') no-repeat right top
+	display: inline-block
+	box-shadow: 0px 6px 18px rgba(192, 48, 83, 0.26)
+	background-color: $red
+	color: #ffffff
+	font-family: 'Roboto', sans-serif
+	font-weight: bold
+	font-size: 18px;
+	line-height: 21px;
+	padding: 17px 47px
+	cursor: pointer
+	color: #ffffff
+	transition: .3s ease;
 
+img 
+	max-width: 100%
+
+a
+	text-decoration: none
+	color: inherit
+	
+
+p, h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0

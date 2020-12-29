@@ -1,18 +1,51 @@
 .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    padding: 140px 0;
 
     &__box {
+        position: relative;
+        max-width: 680px;
+        width: 100%;
+        z-index: 7;
     }
 
     &__title {
+        margin-bottom: 50px;
     }
 
     &__text {
+        max-width: 480px;
+        font-size: 20px;
+        line-height: 140%;
+        color: $textcolor;
+        margin-bottom: 50px;
     }
 
     &__btn {
     }
 
     &__img {
+        position: relative;
+        z-index: 7;
     }
 }
 
+.hero-main {
+    .hero__img {
+        &::after {
+            position: absolute;
+            content: "";
+            right: -286px;
+            bottom: 82px;
+            width: 387px;
+            height: 161px;
+            background: url('../images/dist/hero-main-bg.svg') no-repeat center;
+            background-size: 74%;
+
+        }
+    }
+}

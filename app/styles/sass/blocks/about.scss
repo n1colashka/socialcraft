@@ -1,0 +1,57 @@
+.about {
+
+    &__title {
+        text-align: center;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    &__inner {
+        padding: 0 45px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__col {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:last-child {
+            margin-left: 155px;
+            &::before {
+                position: absolute;
+                content: "";
+                left: -32px;
+                top: -40px;
+                width: 25px;
+                height: 100px;
+                background: url('../images/dist/arrow.svg') no-repeat center;
+            }
+        }
+        
+        
+    }
+
+    &__img {
+        margin-top: -135px;
+    }
+
+    &__text {
+        max-width: 400px;
+    }
+
+    &__foot {
+    }
+
+    &__foot-item {
+    }
+
+    &__foot-num {
+    }
+}
