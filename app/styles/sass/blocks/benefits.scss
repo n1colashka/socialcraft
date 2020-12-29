@@ -1,0 +1,45 @@
+.benefits {
+    padding-top: 77px;
+    padding-bottom: 104px;
+    background: url('../images/dist/pixels-bg.svg') no-repeat top 100px right,
+                url('../images/dist/pixels-bg.svg') no-repeat bottom 100px left;
+
+    &__title {
+        max-width: 765px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+    }
+
+    &__item {
+        margin: 0 15px;
+        background-color: $accent;
+        padding: 30px;
+        text-align: center;
+        max-width: calc(33.333% - 30px);
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        height: 90px;
+    }
+
+    &__item-title {
+        font-family: Gouranga, sans-serif;
+        margin-bottom: 14px;   
+    }
+    
+    &__text {
+        font-size: 14px;
+        line-height: 130%;
+    }
+}

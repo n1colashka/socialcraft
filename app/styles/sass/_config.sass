@@ -26,6 +26,7 @@ $gutter: $grid-gutter-width
 
 // FONTS LOAD SECTION
 
+	
 @mixin font($fname, $fstyle, $fweight, $furl)
 	@font-face
 		font-family: $fname
@@ -34,7 +35,7 @@ $gutter: $grid-gutter-width
 		src: url($furl) format('woff2')
 
 	
-// @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@include font('gouranga', normal, 400, '../fonts/Gouranga-Pixel.ttf')
 
 // GENERAL DOCUMENT STYLES
 
@@ -62,10 +63,18 @@ body
 	background-color: $bg
 	overflow-x: hidden
 
+html
+	box-sizing: border-box
+
+*, *::before, *::after
+	box-sizing: inherit
+	
 ul 
 	list-style: none
 	padding: 0
 	margin: 0
+
+
 
 
 // Input number fix
@@ -130,3 +139,4 @@ a
 p, h1, h2, h3, h4, h5, h6
 	margin: 0
 	padding: 0
+	font-weight: normal

@@ -1,0 +1,75 @@
+.schedule {
+    background: url('../images/dist/pixels-bg.svg') no-repeat left bottom 86px;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 86px;
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(220, 199, 176, 0.23);
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+
+    &__title {
+        position: relative;
+        z-index: 6;
+        max-width: 940px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 27px;
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: 6;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+    &__tetris {
+        position: relative;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 670px;
+        width: 100%;
+        padding: 30px;
+        background: url('../images/dist/tetris.svg') center no-repeat;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        width: 290px;
+        height: 70px;
+        background: url('../images/dist/schedule-item-border.svg') no-repeat center;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+    }
+
+    &__icon {
+        width: 40px;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    &__time {
+        font-family: 'Gouranga', sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        color: $red;
+    }
+
+    &__caption {
+        font-size: 14px;
+        line-height: 1;
+    }
+}
