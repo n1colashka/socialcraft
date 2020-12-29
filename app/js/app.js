@@ -4,6 +4,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// Custom JS
+	function initReviewsSlider() {
+		const reviewsSlider = new Swiper('.reviews__slider', {
+			slidesPerView: 3,
+			spaceBetween: 40,
+			loop: true,
+			// Navigation arrows
+			navigation: {
+				nextEl: '.reviews__button-next',
+				prevEl: '.reviews__button-prev',
+			},
+		})
+	}
+
+	initReviewsSlider();
 
 })
