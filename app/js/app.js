@@ -34,8 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		
 	}
+
+	function initMenu() {
+		const menu = document.querySelector('.menu');
+		const menuBtn = document.querySelector('.header__btn');
+		const html = document.querySelector('html');
+
+		menuBtn.addEventListener('click', () => {
+			menu.classList.toggle('open');
+			html.classList.toggle('overflow-hidden');
+		})
+	}
 	
 	initReviewsSlider();
 	initAccordion();
-
+	initMenu();
 })

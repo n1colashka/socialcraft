@@ -56,7 +56,24 @@
         }
     }
 
-    &__socials {
+    &__btn {
+        display: none;
+        position: relative;
+        z-index: 33;
+        width: 35px;
+        border: none;
+        outline: transparent;
+        background-color: transparent;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $brown;
+            margin-bottom: 4px;
+            border-radius: 20px;
+            transition: .3s ease;
+        }
     }
 
 }
@@ -77,5 +94,112 @@
         li + li {
             margin-left: 11px;
         }
+    }
+}
+
+.menu {
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: translateX(200%);
+    background-color: $accent;
+    transition: .3s ease;
+    padding: 10px;
+    padding-top: 140px;
+    text-align: center;
+
+    &.open {
+        transform: translateX(0);
+        & ~ .header__btn {
+            position: relative;
+            span {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transform: translateY(-50%) rotate(45deg);
+
+                &:nth-child(2) {
+                    background-color: transparent;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__nav {
+        margin-bottom: 70px;
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 7px;
+            padding-bottom: 18px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            transition: .3s ease;
+            color: $brown;
+            text-transform: uppercase;
+        }
+
+        li {
+            margin-bottom: 38px;
+
+            &:hover a {
+                color: $red;
+            }
+
+            &.active {
+                a {
+                    color: $red;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 6px;
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    &__row {
+        font-size: 16px;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+
+    &__row-title {
+        margin-bottom: 15px;
+    }
+
+    &__row-item {
+        display: block;
+    }
+
+    &__socials-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li + li {
+            margin-left: 10px;
+        }
+    }
+}
+.menu-navigation {
+
+    &__list {
     }
 }

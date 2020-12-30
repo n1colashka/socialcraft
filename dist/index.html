@@ -37,12 +37,35 @@
 			<li><a href="#"><img src="images/dist/fb-icon.svg" alt="facebook"></a></li>
 		</ul>
 	</div>
-	<button class="header__btn"><span></span></button>
 	<div class="header__menu menu">
-		<nav class="menu__navigation">
-			
+		<nav class="menu__nav menu-navigation">
+			<ul class="menu-navigation__list">
+				<li class="active"><a href="#">О нас</a></li>
+				<li><a href="#">Вакансии</a></li>
+				<li><a href="#">Блог</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
 		</nav>
+		<div class="menu__row">
+			<div class="menu__row-title">звоните нам:</div>
+			<a class="menu__row-item" href="tel:+38(093)1703299">+38 (093) 170-32-99</a>
+			<a class="menu__row-item" href="tel:+38(093)1703299">+38 (067) 911-61-99</a>
+			<a class="menu__row-item" href="tel:+38(093)1703299">+38 (050) 449-61-99</a>
+		</div>
+		<div class="menu__row">
+			<div class="menu__row-title">пишите нам:</div>
+			<a class="menu__row-item" href="mailto:chat@socialcraft.ua">chat@socialcraft.ua</a>
+		</div>
+		<ul class="menu__socials-list">
+			<li><a href="#"><img src="images/dist/insta-icon.svg" alt="instagram"></a></li>
+			<li><a href="#"><img src="images/dist/fb-icon.svg" alt="facebook"></a></li>
+		</ul>
 	</div>
+	<button class="header__btn">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
 </header>
 
 		<section class="hero hero-main">
@@ -60,7 +83,7 @@
 		</section>
 	</div>
 </div>
-<!-- 
+
 <section class="communication">
 	<div class="container">
 		<div class="communication__inner">
@@ -68,7 +91,7 @@
 				<img src="images/dist/communication-main.svg" alt="socialcraft">
 			</div>
 			<div class="communication__content">
-				<h2 class="communication__title title"><span>Socialcraft</span> - студия общения</h2>
+				<h2 class="communication__title title"><span>Socialcraft</span> <i>-</i> студия общения</h2>
 				<div class="communication__text">
 					<p>
 						Пока обычные люди сидят на своих скучных работах, мы уже более 5 лет спасаем мир от одиночества! 
@@ -77,11 +100,14 @@
 						Каждый человек заслуживает внимания, чтобы переживания – выслушали, заслугам – порадовались, на флирт – улыбнулись. Именно этим и занимаемся – слушаем,&nbsp;слышим и мурлыкаем.
 					</p>
 				</div>
-				<a href="#" class="community__btn btn">Хочу в команду</a>
+				<div class="btn-wrapper">
+					<a href="#" class="community__btn btn">Хочу в команду</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 
 <section class="about">
 	<h2 class="about__title title">Дейтинговая студия, которая объединила людей, которые любят и умеют общаться</h2>
@@ -94,6 +120,9 @@
 				<div class="about__text">
 					Наша команда работает на эксклюзивных правах только с самыми популярными международными сайтами знакомств. Мы честно зарабатываем высокие комиссионные, помогая одиноким иностранным мужчинам познакомятся с нашими клиентками.
 				</div>
+			</div>
+			<div class="about__mobile-img">
+				<img src="images/dist/about-mobile.svg" alt="about">
 			</div>
 			<div class="about__col">
 				<div class="about__text">
@@ -120,7 +149,7 @@
 		</div>
 	</div>
 </section>
-
+<!-- 
 <section class="benefits">
 	<div class="container">
 		<h2 class="benefits__title title">Быть в нашей команде интересно и перспективно</h2>
