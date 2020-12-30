@@ -3,6 +3,13 @@
 
 
 
+@media (max-width: 1500px) {
+    .benefits {
+        background: url(../images/dist/pixels-bg.svg) no-repeat top 100px right / 100px ,
+        url(../images/dist/pixels-bg.svg) no-repeat bottom 100px left / 100px ;
+    }
+}
+
 @media (max-width: 1400px) {
     .about {
         &__col:last-child {
@@ -22,6 +29,28 @@
 
 
 @media (max-width: 1200px) {
+    .questions {
+        background-size: 100px;
+        &__item {
+            height: 40px;
+            width: 308px;
+            background-image: url('../images/questions-item-bg-mobile.svg');
+
+            &.open {
+                background-image: url('../images/questions-item-bg-mobile-open.svg');
+                height: 180px;
+            }
+        }
+    }
+    .reviews {
+        &__item {
+            padding: 20px;
+        }
+    }
+    .benefits {
+        background: url(../images/dist/pixels-bg.svg) no-repeat top 100px right -25px / 50px ,
+        url(../images/dist/pixels-bg.svg) no-repeat bottom 100px left -25px / 50px ;
+    }
     .about {
         &__inner {
             padding: 0 10px;
@@ -62,6 +91,90 @@
 
 
 @media (max-width: 1024px) {
+    .questions {
+        padding-top: 40px;
+        background: url('../images/dist/pixels-bg.svg') left bottom 86px / 50px no-repeat,
+        url('../images/dist/questions-mobile-bg-left.svg') top 50px left  no-repeat,
+        url('../images/dist/questions-mobile-bg-right.svg') top right  no-repeat;
+    }
+    .reviews {
+        position: relative;
+        background: url('../images/dist/reviews-mobile-bg-left.svg') left top 116px no-repeat;
+        padding-top: 72px; 
+        padding-bottom: 0;
+        margin-bottom: 5px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 40px;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 0,50% 88%,100% 0);
+            background: rgba(220, 199, 176, 0.23);
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+    }
+    .schedule {
+        padding-bottom: 0;
+        background-size: 50px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: -15px;
+            right: -15px;
+            height: 55px;
+            width: calc(100% + 30px);
+            margin: 0 auto;
+            background-color: $bg;
+            z-index: 0;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: 14px;
+            line-height: 130%;
+            margin-bottom: 25px;
+        }
+
+        &::after {
+            clip-path: polygon(0 0,50% 92%,100% 0);
+        }
+    }
+    .team {
+        padding-top: 0;
+
+        & > .container {
+            display: none;
+        }
+    }
+    .team-head {
+        &__text {
+            font-size: 16px;
+        }
+        &__content {
+            max-width: 470px;
+        }
+    }
+    
+    .benefits {
+        padding-bottom: 10px;
+        &__list {
+            flex-wrap: wrap;
+        }
+        &__item {
+            max-width: calc(50% - 30px);
+            margin-bottom: 30px;
+        }
+    }
     .about {
         padding-top: 10px;
         padding-bottom: 45px;
@@ -214,9 +327,61 @@
 }
 
 @media (max-width: 830px) {
+    .team-head {
+        min-height: 330px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+        position: relative;
+        z-index: 4;
+
+        .container {
+            position: relative;
+            z-index: 11;
+        }
+        
+        &__bg-mobile {
+            position: absolute;
+            background: url('../images/dist/team-mobile.svg') no-repeat right 20px bottom 20px;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 9;
+        }
+        &__img {
+            display: none;
+        }
+        &__title {
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        &__triangle {
+            clip-path: polygon(100% 0, 0 0, 100% 66%);
+            width: 120%;
+            left: -35px;
+            z-index: 0;
+
+            &::after {
+                clip-path: none;
+            }
+        }
+        &__content {
+            max-width: 100%;
+        }
+        &__text {
+            padding-right: 60px;
+            padding-left: 10px;
+            
+        }
+        &__box {
+            padding-bottom: 0;
+        }
+        
+    }
+    
     .about {
         padding-bottom: 0;
-
         
         &__foot {
             flex-direction: column;
@@ -236,7 +401,112 @@
     }
 }
 
+@media (max-width: 768px) {
+    .reviews__button-next,
+    .reviews__button-prev {
+        display: none;
+    }
+    .reviews__title {
+        margin-bottom: 25px;
+    }
+    .reviews__item {
+        max-width: 400px;
+    }
+    .reviews__slider {
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .reviews__slider-wrapper {
+        display: block;
+    }
+} 
+
+@media (max-width: 700px) {
+    .schedule {
+        padding-top: 30px;
+        background: rgba(220,199,176,.23);;
+        &::after {
+            display: none;
+        }
+        &__icon {
+            width: 35px;
+            height: 35px;
+        }
+        &__time {
+            font-size: 18px;
+            line-height: 1;
+        }
+        &__caption {
+            font-size: 12px;
+            line-height: 1;
+        }
+        &__item {
+            margin-bottom: 20px;
+            width: 190px;
+            height: 61px;
+            background-image: url('../images/dist/schedule-item-border-mobile.svg');
+
+            &:first-child {
+                margin-top: 18px;
+            }
+        }
+        &__tetris {
+            background-image: url('../images/dist/tetris-mobile.svg');
+            max-width: 300px;
+            height: 260px;
+        }
+    }
+}
+
 @media (max-width: 600px) {
+    .reviews {
+        &__item {
+            padding: 15px;
+            padding-top: 30px;
+            max-width: 100%;
+        }
+        &__name {
+            font-size: 16px;
+            line-height: 120%;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 140%;
+        }
+    }
+    .team-head {
+        &__text {
+            font-size: 13px;
+        }
+    }
+    .benefits {
+        background: url(../images/dist/pixels-bg.svg) no-repeat top 155px right / 50px ,
+        url(../images/dist/pixels-bg.svg) no-repeat bottom 3 55px left / 50px ;
+        &__title {
+            margin-bottom: 25px;
+        }
+        &__list {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &__item {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 20px;
+        }
+        &__item-title {
+            font-size: 16px;
+            line-height: 120%;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 140%;
+        }
+    }
     .about {
         &__text {
             font-size: 13px;

@@ -16,6 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
 					nextEl: '.reviews__button-next',
 					prevEl: '.reviews__button-prev',
 				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 0,
+					},
+					600: {
+						slidesPerView: 2,
+					},
+					1024: {
+						spaceBetween: 20,
+					},
+					1201: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					}
+				}
 			})
 		}
 		
