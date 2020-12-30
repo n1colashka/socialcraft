@@ -32,7 +32,31 @@
             content: none;
         }
         &::before {
+            display: block;
+            content: "";
             background: url('../images/dist/hero-bg.svg') no-repeat top center;
+            z-index: 0;
+
+            @media (max-width: 768px) {
+                background: url('../images/dist/first-screen-bg.svg') no-repeat top 62px right -38px;
+            }
+        }
+    }
+}
+.article-page {
+    .first-screen {
+        &::after {
+            content: none;
+        }
+        &::before {
+            display: block;
+            content: "";
+            background: url('../images/dist/hero-bg.svg') no-repeat top center;
+            z-index: 0;
+
+            @media (max-width: 768px) {
+                background: url('../images/dist/first-screen-bg.svg') no-repeat top 62px right -38px;
+            }
         }
     }
 }

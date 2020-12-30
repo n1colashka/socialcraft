@@ -3,7 +3,7 @@
                 url('../images/dist/pixels-bg.svg') no-repeat right bottom 40%,
                 url('../images/dist/pixels-bg.svg') no-repeat left bottom 10%;
     position: relative;
-    z-index: 10;
+    z-index: 0;
     padding-bottom: 95px;
 
     &__inner {
@@ -144,6 +144,7 @@
         padding-right: 33px;
     }
 }
+
 .breadcrumbs {
     padding-bottom: 40px;
 

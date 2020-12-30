@@ -5,9 +5,14 @@
 
 
 @media (max-width: 1700px) {
-.form {
-    background: url('../images/dist/pixels-bg.svg') top right / 130px no-repeat,url('../images/dist/pixels-bg.svg') left bottom 255px / 130px no-repeat;
-}
+    .form {
+        background: url('../images/dist/pixels-bg.svg') top right / 130px no-repeat,url('../images/dist/pixels-bg.svg') left bottom 255px / 130px no-repeat;
+    }
+    .article {
+        background: url('../images/dist/pixels-bg.svg') no-repeat left top 20% / 100px,
+                    url('../images/dist/pixels-bg.svg') no-repeat right bottom 40% / 100px,
+                    url('../images/dist/pixels-bg.svg') no-repeat left bottom 10% / 100px;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -40,6 +45,11 @@
 
 
 @media (max-width: 1200px) {
+    .article {
+        background: url('../images/dist/pixels-bg.svg') no-repeat left -30px top 20% / 65px,
+                    url('../images/dist/pixels-bg.svg') no-repeat right -30px bottom 40% / 65px,
+                    url('../images/dist/pixels-bg.svg') no-repeat left -30px bottom 10% / 65px;
+    }
     .banner {
         &__content {
             margin-left: 20px;
@@ -145,7 +155,54 @@
 
 
 @media (max-width: 1024px) {
+    .article {
+        padding-bottom: 10px;
+
+        &__title {
+            font-size: 36px;
+            line-height: 42px;
+            margin-bottom: 10px;
+        }
+
+        &__title-big {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 12px;
+        }
     
+        &__title-medium {
+            font-size: 16px;
+        }
+        
+        &__title-small {
+            margin-bottom: 2px;
+        }
+        &__box {
+            align-items: center;
+        }
+        &__list li,span {
+            font-size: 13px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+        &__cite {
+            padding: 16px 20px;
+            margin-bottom: 22px;
+            font-size: 13px;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 140%;
+            margin-bottom: 20px;
+
+            p + p {
+                margin: 0;
+            }
+        }
+        &__box {
+            margin-bottom: 15px;
+        }
+    }
     .blog {
         padding-bottom: 40px;
         background: url('../images/dist/pixels-bg.svg') no-repeat left -30px top 20% / 65px,
@@ -777,6 +834,21 @@
 }
 
 @media (max-width: 830px) {
+    .article {
+        &__box {
+            flex-direction: column;
+        }
+
+        &__content {
+            max-width: 100%;
+        }
+
+        &__img {
+            margin-left: 0;
+            margin-bottom: 18px;
+            order: -1;
+        }
+    }
     .test {
         &__answer {
             textarea {
@@ -904,6 +976,12 @@
 }
 
 @media (max-width: 768px) {
+    .article {
+        padding-top: 0;
+        &__list span {
+            display: none;
+        }
+    }
     .breadcrumbs {
         display: none;
     }
@@ -1017,6 +1095,20 @@
 }
 
 @media (max-width: 600px) {
+    .article {
+        &__img {
+            margin-left: -15px;
+            margin-right: -15px;
+            width: calc(100% + 30px);
+            img {
+                width: 100%;
+                height: 265px;
+            }
+        }
+    }
+    .article__list li::before {
+        top: 8px;
+    }
     .application {
         &__subtitle {
             font-size: 13px;
