@@ -145,6 +145,54 @@
 
 
 @media (max-width: 1024px) {
+    .task {
+        &.form {
+            padding-bottom: 0;
+        }
+        &__question {
+            font-size: 16px;
+        }
+        &__example {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        &__example-item {
+            padding: 14px 24px;
+        }
+        &__answer-item {
+            margin-bottom: 15px;
+            input {
+                font-size: 16px;
+                line-height: 21px;
+            }
+            textarea {
+                min-height: 130px;
+                font-size: 13px;
+                line-height: 17px;
+            }
+        }
+        .task__checkbox {
+            margin-top: 0;
+            margin-bottom: 14px;
+
+            label {
+                align-items: flex-start;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    
+    .hero-task {
+        .hero__title {
+            font-size: 44px;
+            line-height: 52px;
+        }
+    }
     .form__row--quad .form__item {
         max-width: 100%;
         margin-bottom: 11px;
@@ -346,7 +394,23 @@
         background-position: top;
         background-image: url('../images/dist/hero-admin-mobile.svg');
     }
-    
+    .task-page .hero-task {
+        background: url('../images/dist/hero-task-bg-left.svg') top 20px left,
+                    url('../images/dist/hero-task-bg-right.svg') bottom right;
+        background-repeat: no-repeat;
+    }
+    .hero__text {
+        padding-right: 120px;
+    }
+    .hero-task .hero__box{
+        text-align: left;
+    }
+    .hero-task {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .footer {
         padding: 40px 0;
 
@@ -673,6 +737,9 @@
             background-size: 65px;
         }
     }
+    .form.task {
+        background: none;
+    }
 }
 
 @media (max-width: 830px) {
@@ -803,6 +870,10 @@
 }
 
 @media (max-width: 768px) {
+    .hero-task .hero__text {
+        font-size: 13px;
+        line-height: 140%;
+    }
     .quiz {
         &__answer {
             textarea {
@@ -831,6 +902,13 @@
 } 
 
 @media (max-width: 700px) {
+    .task {
+        &__answer-item {
+            textarea {
+                min-height: 90px;
+            }
+        }
+    }
     .schedule {
         padding-top: 30px;
         background: rgba(220,199,176,.23);;
@@ -975,6 +1053,12 @@
 }
 
 @media (max-width: 470px) {
+    .hero-task .hero__text-mobile {
+        display: block;
+    }
+    .hero-task .hero__text{
+        display: none;
+    }
     .banner {
         &__text-mobile {
             padding-right: 33px;
