@@ -33,13 +33,43 @@
         background-size: 100px;
         &__item {
             height: 40px;
-            width: 308px;
-            background-image: url('../images/questions-item-bg-mobile.svg');
+            width: 310px;
+            background: url('../images/dist/questions-item-bg-mobile.svg') center no-repeat;
+            margin-left: auto;
+            margin-right: auto;
 
             &.open {
-                background-image: url('../images/questions-item-bg-mobile-open.svg');
+                background: url('../images/dist/questions-item-bg-mobile-open.svg') center no-repeat;
                 height: 180px;
+
+                .questions__content {
+                    padding-left: 7px;
+                    padding-right: 7px;
+                    padding-bottom: 7px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 17px;
+                }
             }
+        }
+        &__item-title {
+            font-size: 16px;
+        }
+        &__item-btn {
+            right: 10px;
+            width: 20px;
+            height: 20px;
+
+            span {
+                width: 10px;
+                height: 2px;
+            }
+        }
+        &__content {
+            
+        }
+        &__item-head {
+            padding: 7px;
         }
     }
     .reviews {
@@ -91,11 +121,97 @@
 
 
 @media (max-width: 1024px) {
+    .footer {
+        padding: 40px 0;
+
+        &__logo {
+            img {
+            width: 132px;
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        &__item {
+            font-size: 16px;
+        }
+
+        &__socials-list {
+            li + li {
+                margin-left: 30px;
+            }
+        }
+    }
+    .application {
+        padding-bottom: 35px;
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &__form {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        &::before {
+            background: url('../images/dist/cloud-2.svg') no-repeat top -11px right -51px / 95px;
+        }
+        &::after {
+            clip-path: polygon(100% 0, 0 0, 50% 170%);
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__mobile {
+            display: block;
+            margin-top: -10px;
+        }
+
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__item {
+            margin-bottom: 15px;
+            input {
+                font-size: 13px;
+                line-height: 150%;
+                padding: 13px 18px;
+            }
+        }
+
+        &__title {
+            text-align: center;
+            margin-bottom: 18px;
+            margin-left: -8px;
+            margin-right: -8px;
+            span {
+                display: block;
+            }
+        }
+
+        &__subtitle {
+            text-align: center;
+            font-size: 16px;
+            line-height: 120%;
+            margin-bottom: 25px;
+        }
+    }
     .questions {
         padding-top: 40px;
-        background: url('../images/dist/pixels-bg.svg') left bottom 86px / 50px no-repeat,
+        padding-bottom: 40px;
+        background: url('../images/dist/pixels-bg.svg') left -40px bottom 290px/50px no-repeat,
         url('../images/dist/questions-mobile-bg-left.svg') top 50px left  no-repeat,
         url('../images/dist/questions-mobile-bg-right.svg') top right  no-repeat;
+
+        &__item {
+            margin-bottom: 10px;
+        }
     }
     .reviews {
         position: relative;
@@ -327,6 +443,21 @@
 }
 
 @media (max-width: 830px) {
+    .footer {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            margin-bottom: 7px;
+        }
+
+        &__col {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
     .team-head {
         min-height: 330px;
         padding-top: 30px;
@@ -460,6 +591,18 @@
 }
 
 @media (max-width: 600px) {
+    .application {
+        &__subtitle {
+            font-size: 13px;
+        }
+    }
+    .questions__list {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .questions__title {
+        margin-bottom: 25px;
+    }
     .reviews {
         &__item {
             padding: 15px;
@@ -536,7 +679,7 @@
 
     .title {
         font-size: 32px;
-        line-height: 1;
+        line-height: 1.1;
     }
 
     .hero {

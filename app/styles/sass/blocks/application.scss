@@ -34,14 +34,19 @@
             z-index: 9;
 		}
 
-		&__img {
+		&__mobile {
+                  display: none;
 		}
 
 		&__form {
-            margin-left: 65px;
-            margin-right: 53px;
-            max-width: 515px;
-            width: 100%;
+                  margin-left: 65px;
+                  margin-right: 53px;
+                  max-width: 515px;
+                  width: 100%;
+
+                  form {
+                        text-align: center;
+                  }
 		}
 
 		&__title {
