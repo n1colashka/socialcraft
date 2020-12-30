@@ -25,3 +25,14 @@
         z-index: 0;
     }
 }
+
+.blog-page {
+    .first-screen {
+        &::after {
+            content: none;
+        }
+        &::before {
+            background: url('../images/dist/hero-bg.svg') no-repeat top center;
+        }
+    }
+}

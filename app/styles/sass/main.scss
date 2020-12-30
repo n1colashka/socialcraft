@@ -145,6 +145,40 @@
 
 
 @media (max-width: 1024px) {
+    
+    .blog {
+        padding-bottom: 40px;
+        background: url('../images/dist/pixels-bg.svg') no-repeat left -30px top 20% / 65px,
+                url('../images/dist/pixels-bg.svg') no-repeat right -30px bottom 40% / 65px,
+                url('../images/dist/pixels-bg.svg') no-repeat left -30px bottom 10% / 65px;
+
+        &__title {
+            font-size: 32px;
+            line-height: 37px;
+        }
+
+        &__text {
+            padding-right: 10px;
+            font-size: 13px;
+        }
+
+        &__content {
+            padding: 20px 18px;
+        }
+
+        &__item-title {
+            margin-bottom: 6px;
+            margin-left: -18px;
+            padding-right: 18px;
+            font-size: 18px;
+        }
+        
+        &__btn {
+            font-size: 12px;
+            margin-right: -18px;
+        }
+
+    }
     .task {
         &.form {
             padding-bottom: 0;
@@ -870,6 +904,9 @@
 }
 
 @media (max-width: 768px) {
+    .breadcrumbs {
+        display: none;
+    }
     .hero-task .hero__text {
         font-size: 13px;
         line-height: 140%;
@@ -941,6 +978,40 @@
             background-image: url('../images/dist/tetris-mobile.svg');
             max-width: 300px;
             height: 260px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .pagination ul li a {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .blog {
+        &__inner {
+            padding-bottom: 15px;
+        }
+        &__date {
+            left: auto;
+            right: 17px;
+        }
+        &__img {
+            height: 210px;
+        }
+        &__list {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &__item {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
