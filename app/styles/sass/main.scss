@@ -4,10 +4,16 @@
 
 
 
+@media (max-width: 1700px) {
+.form {
+    background: url('../images/dist/pixels-bg.svg') top right / 130px no-repeat,url('../images/dist/pixels-bg.svg') left bottom 255px / 130px no-repeat;
+}
+}
+
 @media (max-width: 1500px) {
     .benefits {
-        background: url(../images/dist/pixels-bg.svg) no-repeat top 100px right / 100px ,
-        url(../images/dist/pixels-bg.svg) no-repeat bottom 100px left / 100px ;
+        background: url('../images/dist/pixels-bg.svg') no-repeat top 100px right / 100px ,
+        url('../images/dist/pixels-bg.svg') no-repeat bottom 100px left / 100px ;
     }
 }
 
@@ -27,8 +33,8 @@
         padding-top: 20px;
     }
     .form {
-        background: url('../images/dist/pixels-bg.svg') top right / 100px no-repeat,
-                url('../images/dist/pixels-bg.svg') left bottom 255px / 100px no-repeat;
+        background: url('../images/dist/pixels-bg.svg') top right -40px / 100px no-repeat,
+                url('../images/dist/pixels-bg.svg') left -40px bottom 255px / 100px no-repeat;
     }
 }
 
@@ -139,6 +145,55 @@
 
 
 @media (max-width: 1024px) {
+    .scout-page {
+        .form {
+            background: url(../images/dist/pixels-bg.svg) top right -25px/65px no-repeat,url(../images/dist/pixels-bg.svg) left -20px top 210px/65px no-repeat,url(../images/dist/pixels-bg.svg) right -10px top 305px/65px no-repeat;
+        }
+        .form__select select {
+            border-radius: 10px;
+        }
+    }
+
+    .test {
+        padding-bottom: 15px;
+        &__title {
+            font-size: 32px;
+            line-height: 37px;
+            margin-bottom: 25px;
+        }
+        &__question {
+            padding: 16px 22px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        &__item {
+            margin-bottom: 20px;
+        }
+        &__answer {
+            textarea {
+                font-size: 13px;
+                line-height: 17px;
+                padding: 15px 25px;
+                min-height: 150px;
+            }
+        }
+        .test__checkbox {
+            label {
+                align-items: flex-start;
+                span {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .form__row--checkboxes .form__item:first-child {
+        max-width: 100%;
+    }
+    .form__row--checkboxes .form__item:last-child {
+        max-width: 100%;
+    }
     .form {
         padding-bottom: 0;
         background: url('../images/dist/pixels-bg.svg') top right -25px / 65px no-repeat,
@@ -151,6 +206,11 @@
         }
         &__item--checkboxes {
             margin-top: 25px;
+        }
+        
+
+        &__row--single {
+            max-width: 100%;
         }
         
         &__caption {
@@ -169,9 +229,18 @@
                 margin-bottom: 20px;
             }
         }
+        &__row--checkboxes {
+            margin-top: 24px;
+            margin-bottom: 20px;
+        }
         &__select select {
             font-size: 13px;
             line-height: 16px;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: 18px;
+            margin-bottom: 22px;
         }
         &__range-caption {
             font-weight: 500;
@@ -212,6 +281,9 @@
             margin-bottom: 13px;
         }
     }
+    .form__checkbox label {
+        align-items: center;
+    }
     .banner {
         &__inner {
             padding: 10px;
@@ -237,6 +309,9 @@
         .hero__box {
             padding-right: 0;
         }
+    }
+    .hero-scout {
+        background-image: url('../images/dist/hero-scout-mobile.svg');
     }
     .footer {
         padding: 40px 0;
@@ -560,6 +635,13 @@
 }
 
 @media (max-width: 830px) {
+    .test {
+        &__answer {
+            textarea {
+                min-height: 90px;
+            }
+        }
+    }
     .banner {
         padding-top: 17px;
         padding-bottom: 20px;
@@ -860,6 +942,13 @@
 }
 
 @media (max-width: 350px) {
+    .test__title {
+        font-size: 30px;
+    }
+    .form__policy {
+        margin-left: -3px;
+        margin-right: -3px;
+    }
     .hero-main {
         background: url('../images/dist/hero-main-mobile.svg') bottom 84px center no-repeat;
     }

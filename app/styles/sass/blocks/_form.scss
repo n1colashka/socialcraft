@@ -15,6 +15,8 @@
         margin-bottom: 70px;
     }
 
+    
+
     &__item {
         position: relative;
         width: 100%;
@@ -174,11 +176,40 @@
     &__checkboxes {
         align-items: stretch;
         margin-bottom: 35px;
-        margin-left: 25px;
     }
 
+    &__text {
+        margin-bottom: 40px;
+        color: #000000;
+        p + p {
+            margin-top: 20px;
+        }
+    }
+
+    &__row--checkboxes {
+        margin-bottom: 65px;
+
+        .form__item {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .form__item:first-child {
+            max-width: 45%;
+        }
+        .form__item:last-child {
+            max-width: 55%;
+        }
+    }
+
+    &__row--single {
+        max-width: 50%;
+        width: 100%;
+    }
+    
     &__item--checkboxes {
         margin-top: 32px;
+        margin-left: 25px;
     }
     
     &__check {
@@ -269,5 +300,86 @@
             clip-path: polygon(0 0,50% 88%,100% 0);
             background: rgba(220,199,176,.23);
         }
+    }
+}
+
+.scout-page {
+    
+    .form__select select {
+        border-radius: 0;
+    }
+    @media (min-width: 1025px) {
+        .form {
+            background: url('../images/dist/pixels-bg.svg') top 36% left no-repeat,
+        }
+        .form__row {
+            .form__check::after {
+                background: url('../images/dist/check-2.svg') center no-repeat;
+                left: 2px;
+                top: -6px;
+                width: 29px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+.test {
+    padding-bottom: 35px;
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-bottom: 40px;
+    }
+
+    &__question {
+        font-style: italic;
+        position: relative;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 143.69%;
+        color: #828282;
+        margin-bottom: 30px;
+        padding: 19px 36px;
+        background-color: #ffffff;
+        border: 1px solid #E7E7E7;
+        
+        @media (min-width: 769px) {
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 4px;
+                border-radius: 15px;
+                background-color: $red;
+            }
+        }
+    }
+
+    &__answer {
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 19px 23px;
+            font-size: 18px;
+            line-height: 24px;
+            color: #979797;
+            background-color: #ffffff;
+            border: 1px solid #E7E7E7;
+            min-height: 240px;
+        }
+    }
+
+    &__checkbox {
+        font-family: 'Geometria', sans-serif;
+        font-weight: 500;
     }
 }
