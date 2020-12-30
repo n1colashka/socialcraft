@@ -23,7 +23,7 @@
             padding-top: 15px;
 
             .questions__item-btn>span::after {
-                transform: rotate(90deg);
+                transform: rotate(0);
             }
             .questions__content {
                 opacity: 1;
@@ -94,6 +94,7 @@
                 transition: .3s ease;
                 left: 0;
                 top: 0;
+                transform: rotate(90deg);
                 background-color: #FDF4E9;
             }
         }

@@ -1,0 +1,43 @@
+.banner {
+    padding-top: 87px;
+    padding-bottom: 55px;
+
+    &__inner {
+        border: 10px solid rgba(166, 123, 106, 0.41);
+        padding-right: 45px;
+        padding-left: 40px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__img {
+        margin-top: -50px;
+    }
+
+    &__text-mobile {
+        display: none;
+        font-size: 13px;
+        line-height: 140%;
+    }
+    
+    &__content {
+        margin-left: 80px;
+        max-width: 640px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1;
+        margin-bottom: 15px;
+        color: $brown;
+    }
+
+    &__text {
+    }
+}
