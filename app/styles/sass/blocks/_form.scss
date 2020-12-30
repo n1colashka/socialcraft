@@ -250,3 +250,24 @@
     }
 }
 
+.form-page {
+    .reviews {
+        position: relative;
+
+        @media (min-width: 1025px) {
+            background-position: top 446px right;
+        }
+        
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 40px;
+            width: 100%;
+            height: 100%;
+            -webkit-clip-path: polygon(0 0,50% 88%,100% 0);
+            clip-path: polygon(0 0,50% 88%,100% 0);
+            background: rgba(220,199,176,.23);
+        }
+    }
+}
