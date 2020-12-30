@@ -145,9 +145,36 @@
 
 
 @media (max-width: 1024px) {
+    .form__row--quad .form__item {
+        max-width: 100%;
+        margin-bottom: 11px;
+    }
+    .quiz {
+        &__item {
+            margin-bottom: 15px;
+        }
+        &__question {
+            font-size: 13px;
+            line-height: 140%;
+            margin-bottom: 13px;
+        }
+        &__answer {
+            textarea {
+                min-height: 140px;
+                padding: 15px 24px;
+                font-size: 13px;
+                line-height: 17px;
+            }
+        }
+        .quiz__checkbox {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
     .scout-page {
         .form {
-            background: url(../images/dist/pixels-bg.svg) top right -25px/65px no-repeat,url(../images/dist/pixels-bg.svg) left -20px top 210px/65px no-repeat,url(../images/dist/pixels-bg.svg) right -10px top 305px/65px no-repeat;
+            background: url('../images/dist/pixels-bg.svg') top right -25px/65px no-repeat,url('../images/dist/pixels-bg.svg') left -20px top 210px/65px no-repeat,url('../images/dist/pixels-bg.svg') right -10px top 305px/65px no-repeat;
         }
         .form__select select {
             border-radius: 10px;
@@ -285,6 +312,7 @@
         align-items: center;
     }
     .banner {
+        padding-bottom: 24px;
         &__inner {
             padding: 10px;
         }
@@ -310,9 +338,15 @@
             padding-right: 0;
         }
     }
-    .hero-scout {
+    .scout-page .hero-scout {
         background-image: url('../images/dist/hero-scout-mobile.svg');
+        background-position: top;
     }
+    .admin-page .hero-admin {
+        background-position: top;
+        background-image: url('../images/dist/hero-admin-mobile.svg');
+    }
+    
     .footer {
         padding: 40px 0;
 
@@ -632,6 +666,13 @@
             content: none;
         }
     }
+
+    
+    .admin-page {
+        .form {
+            background-size: 65px;
+        }
+    }
 }
 
 @media (max-width: 830px) {
@@ -762,6 +803,13 @@
 }
 
 @media (max-width: 768px) {
+    .quiz {
+        &__answer {
+            textarea {
+                min-height: 90px;
+            }
+        }
+    }
     .reviews__button-next,
     .reviews__button-prev {
         display: none;
@@ -932,16 +980,25 @@
             padding-right: 33px;
         }
     }
+    .hero .hero__title {
+        max-width: 285px;
+    }
     .hero-form {
         background: url('../images/dist/hero-translators-mobile.svg') top center no-repeat;
         .hero__title {
             margin-bottom: 160px;
         }
     }
-    
+    .hero-admin .hero__title {
+        margin-bottom: 190px;
+    }
+    .hero-scout .hero__title {
+        margin-bottom: 190px;
+    }
 }
 
 @media (max-width: 350px) {
+
     .test__title {
         font-size: 30px;
     }
