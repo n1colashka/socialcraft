@@ -39,5 +39,112 @@
             </div>
         </div>
     </section>
+
+    <section class="form">
+        <div class="container">
+            <form action="#">
+                <div class="form__row form__row--1">
+                    <div class="form__item">
+                        <label>
+                            <div class="form__caption">ФИО <span>*</span></div>
+                            <input type="text" placeholder="Введи ФИО">
+                        </label>
+                    </div>
+                    <div class="form__item">
+                        <label>
+                            <div class="form__caption">Номер телефона <span>*</span></div>
+                            <input type="text" placeholder="Введи номер телефона">
+                        </label>
+                    </div>
+                </div>
+                <div class="form__row form__row--range">
+                    <div class="form__item">
+                        <label>
+                            <div class="form__caption">Возраст <span>*</span></div>
+                            <input type="range" class="form__range"
+                            min="1"
+                            max="50"
+                            step="1">
+                            <div class="form__range-value">30</div>
+                        </label>
+                    </div>
+                    <div class="form__item">
+                        <label>
+                            <div class="form__caption">Сколько часов в день ты готов(а) работать? <span>*</span></div>
+                            <input type="range" class="form__range" 
+                            min="1"
+                            max="10"
+                            step="1">
+                            <div class="form__range-value">10</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__row form__row--english form__row--range">
+                    <div class="form__item form__item--english">
+                        <label>
+                            <div class="form__caption">Твой уровень владения английским? <span>*</span></div>
+                            <input type="range" class="form__range" 
+                            data-values="B1, B2, C1, C2, A1, A2, A3"
+                            min="1"
+                            max="7"
+                            step="1">
+                            <div class="form__range-value">B1</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__row form__row--range form__row--days">
+                    <div class="form__item">
+                        <label>
+                            <div class="form__caption">Какой график тебе больше подходит?</div>
+                            <input type="range" class="form__range" 
+                            min="1"
+                            max="3"
+                            step="1">
+                            <div class="form__range-caption">
+                                <span>День</span>
+                                <span>Ночь</span>
+                                <span>Смешанный</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="form__row form__checkboxes">
+                    <div class="form__item">
+                        <label>
+                            <div class="form__caption">Как ты узнал(а) о нас?</div>
+                            <div class="form__select">
+                                <select>
+                                    <option value="Выбери один из вариантов" disabled selected>Выбери один из вариантов</option>
+                                    <option value="Реклама">Реклама</option>
+                                    <option value="Друзья">Друзья</option>
+                                    <option value="Интернет">Интернет</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form__item form__item--checkboxes">
+                        <div class="form__checkbox">
+                            <label>
+                                <input type="checkbox" checked>
+                                <div class="form__check"></div>
+                                <span>Я знаю специфику работы брачных агентств</span>
+                            </label>
+                        </div>
+                        <div class="form__checkbox">
+                            <label>
+                                <input type="checkbox">
+                                <div class="form__check"></div>
+                                <span>У меня есть опыт работы в брачном агентстве</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__btn-wrapper">
+                    <button class="form__btn btn">Отправить</button>
+                </div>
+                <div class="form__policy">Нажимая на кнопку, Вы даете свое согласие на <a href="#">обработку персональных данных</a></div>
+            </form>
+        </div>
+    </section>
 </body>
 <!--#include virtual="/parts/footer.html" -->
